@@ -5,8 +5,7 @@ import time
 import inspect
 def time_home(request):
     now = mul_time_cal([Fibonacci(10),Fibonacci(20),Fibonacci(30)])
-    html = "<html><body>Duration of functions is %s.</body></html>" % now
-    return HttpResponse(html)
+    return render(request,'time_test/time_series.html', {'now': now})
 
 def Fibonacci(n):
     if n<=0:
